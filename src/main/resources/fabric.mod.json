@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "dvcbridge",
+  "version": "${version}",
+  "name": "DVCBridge",
+  "description": "A bridge between Simple Voice Chat and Discord, ported to MC 26.1.2.",
+  "authors": ["Fortniop"],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "server": [
+      "fortniop.dvcbridge.FabricMod"
+    ],
+    "voicechat": [
+      "fortniop.dvcbridge.FabricVoicechatPlugin"
+    ]
+  },
+  "mixins": [
+    "dvcbridge.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}",
+    "voicechat": ">=2.6.0"
+  }
+}
